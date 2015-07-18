@@ -1,7 +1,7 @@
 #include <AltSoftSerial.h> //Include all relevant libraries - see above
 #include <TinyGPS++.h> 
 #include <GSM.h>
-const uint8_t polySides = 4; // 4 sides in your polygon
+const uint8_t polySides = 3; // 4 sides in your polygon
 #define PINNUMBER "" // PIN Number for the SIM - leave blank unless your SIM has a pin, this is inserted between ""
 //                          A,   B,   C,   D
 float polyX[polySides] ; // X
@@ -47,6 +47,18 @@ void loop()
   int count_new = 0;
   while (ss.available() > 0) //while there is stuff in the buffer
     if (gps.encode(ss.read())) //if it can successfully decode it, do it. Else try again when more charachters are in the buffer
+    {
+      float X = (gps.location.lng());
+     float Y = (gps.location.lat());
+     if(pointInPolygon(Y, X)){
+       Serial.println("Within the AREA");
+       digitalWrite(13, LOW);
+     }
+     else
+     {
+       Serial.println("WARNING : OUTSIDE THE AREA\n RETURN TO BASE");
+       digitalWrite(13, HIGH);
+     }
     if (sms.available()) // if a text has been recieved
   {
     Serial.println("Message received from:"); // print to the computer
@@ -67,16 +79,20 @@ void loop()
       Serial.println("\nPASSWORD VALID"); // print to the computer
       sms.beginSMS(senderNumber); // begin an sms to the sender number
       sms.print("https://maps.google.com/maps?q=");
-      sms.print(gps.location.lat(), 14); // append the lat to the sms
+      sms.print(gps.location.lat(), 6); // append the lat to the sms
       sms.print(","); // append a comma
       sms.print(gps.location.lng(), 6); // append the lon to the sms
+      sms.print("\nYou Can Set the Geo Fencing Coordinates at the Link Below");
+      sms.print("\nhttp://medifly.website/polygon");
       sms.endSMS(); //send the sms
-      Serial.print(gps.location.lat(), 14);
       memset (password,NULL,sizeof(password));
     }
     else
    {
-     const char *delim  = ",";   //a comma is the delimiter
+     const char *delim  = "(";   //a comma is the delimiter
+     const char *delim1  = ",";
+     const char *delim3  = ")";
+     char *text;
      char *firstItem;
      char *secondItem;
      char *thirdItem;
@@ -85,40 +101,29 @@ void loop()
      char *sixthItem;
      char *seventhItem;
      char *eighthItem;
-     firstItem = strtok(password,delim); 
-     secondItem = strtok(NULL,delim);
-     thirdItem = strtok(NULL,delim);
-     fourthItem = strtok(NULL,delim);
-     fivethItem = strtok(NULL,delim);
-     sixthItem = strtok(NULL,delim);
-     seventhItem = strtok(NULL,delim);
-     eighthItem = strtok(NULL,delim);
+     text = strtok(password,delim);
+     firstItem = strtok(NULL,delim1);
+     secondItem = strtok(NULL,delim3);
+     secondItem++;
+     thirdItem = strtok(NULL,delim1);
+     thirdItem++;
+     fourthItem = strtok(NULL,delim3);
+     fourthItem++;
+     fivethItem = strtok(NULL,delim1);
+     fivethItem++;
+     sixthItem = strtok(NULL,delim3);
+     sixthItem++;
      polyX[0] = atof(firstItem);
      polyY[0] = atof(secondItem);
      polyX[1] = atof(thirdItem);
      polyY[1] = atof(fourthItem);
      polyX[2] = atof(fivethItem);
      polyY[2] = atof(sixthItem);
-     polyX[3] = atof(seventhItem);
-     polyY[3] = atof(eighthItem);
-     long double X = (gps.location.lng()) ;
-     long double Y = (gps.location.lat()) ;
-     float t = 78.123456 ;
-     Serial.println(t);
-     Serial.println( pointInPolygon(43.39, -80.32));
-     if(pointInPolygon(43.39, -80.32)){
-       Serial.println("Within the AREA");
-       digitalWrite(13, LOW);
-     }
-     else
-     {
-       Serial.println("WARNING : OUTSIDE THE AREA\n RETURN TO BASE");
-       digitalWrite(13, HIGH);
-     }
      memset (password,NULL,sizeof(password));
    }
   }
   delay(1000); // delay
+}
 }
 
 bool pointInPolygon( float x, float y )

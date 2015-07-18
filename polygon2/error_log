@@ -1,0 +1,86 @@
+[06-Jul-2015 19:08:06 America/New_York] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/medipnts/public_html/polygon/server.php on line 96
+[06-Jul-2015 19:08:13 America/New_York] PHP Warning:  require(/home/medipnts/public_html/polygon2/Services/Twilio.php): failed to open stream: No such file or directory in /home/medipnts/public_html/polygon/server.php on line 44
+[06-Jul-2015 19:08:13 America/New_York] PHP Fatal error:  require(): Failed opening required '/home/medipnts/public_html/polygon2/Services/Twilio.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/medipnts/public_html/polygon/server.php on line 44
+[06-Jul-2015 19:09:30 America/New_York] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/medipnts/public_html/polygon/server.php on line 96
+[06-Jul-2015 19:09:34 America/New_York] PHP Warning:  require(/Services/Twilio.php): failed to open stream: No such file or directory in /home/medipnts/public_html/polygon/server.php on line 44
+[06-Jul-2015 19:09:34 America/New_York] PHP Fatal error:  require(): Failed opening required '/Services/Twilio.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/medipnts/public_html/polygon/server.php on line 44
+[06-Jul-2015 19:10:42 America/New_York] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/medipnts/public_html/polygon/server.php on line 96
+[06-Jul-2015 19:10:48 America/New_York] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/medipnts/public_html/polygon/server.php on line 96
+[06-Jul-2015 19:12:55 America/New_York] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/medipnts/public_html/polygon/server.php on line 96
+[06-Jul-2015 19:13:25 America/New_York] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/medipnts/public_html/polygon/server.php on line 96
+[06-Jul-2015 19:14:41 America/New_York] PHP Fatal error:  Uncaught exception 'Services_Twilio_RestException' with message 'Message body is required.' in /home/medipnts/public_html/polygon/Services/Twilio.php:297
+Stack trace:
+#0 /home/medipnts/public_html/polygon/Services/Twilio.php(180): Base_Services_Twilio->_processResponse(Array)
+#1 /home/medipnts/public_html/polygon/Services/Twilio/ListResource.php(92): Base_Services_Twilio->createData('/2010-04-01/Acc...', Array)
+#2 /home/medipnts/public_html/polygon/Services/Twilio/Rest/Messages.php(24): Services_Twilio_ListResource->_create(Array)
+#3 /home/medipnts/public_html/polygon/server.php(63): Services_Twilio_Rest_Messages->create(Array)
+#4 /home/medipnts/public_html/polygon/server.php(23): Polygon::save('')
+#5 /home/medipnts/public_html/polygon/index.php(5): Polygon::saveCoords('')
+#6 {main}
+  thrown in /home/medipnts/public_html/polygon/Services/Twilio.php on line 297
+[06-Jul-2015 19:14:52 America/New_York] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/medipnts/public_html/polygon/server.php on line 96
+[06-Jul-2015 19:16:08 America/New_York] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/medipnts/public_html/polygon/server.php on line 96
+[06-Jul-2015 19:16:43 America/New_York] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/medipnts/public_html/polygon/server.php on line 96
+[06-Jul-2015 19:16:50 America/New_York] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/medipnts/public_html/polygon/server.php on line 96
+[06-Jul-2015 19:18:00 America/New_York] PHP Fatal error:  Uncaught exception 'Services_Twilio_RestException' with message 'Message body is required.' in /home/medipnts/public_html/polygon/Services/Twilio.php:297
+Stack trace:
+#0 /home/medipnts/public_html/polygon/Services/Twilio.php(180): Base_Services_Twilio->_processResponse(Array)
+#1 /home/medipnts/public_html/polygon/Services/Twilio/ListResource.php(92): Base_Services_Twilio->createData('/2010-04-01/Acc...', Array)
+#2 /home/medipnts/public_html/polygon/Services/Twilio/Rest/Messages.php(24): Services_Twilio_ListResource->_create(Array)
+#3 /home/medipnts/public_html/polygon/server.php(63): Services_Twilio_Rest_Messages->create(Array)
+#4 /home/medipnts/public_html/polygon/server.php(23): Polygon::save('')
+#5 /home/medipnts/public_html/polygon/index.php(5): Polygon::saveCoords('')
+#6 {main}
+  thrown in /home/medipnts/public_html/polygon/Services/Twilio.php on line 297
+[06-Jul-2015 19:18:08 America/New_York] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/medipnts/public_html/polygon/server.php on line 96
+[06-Jul-2015 19:21:42 America/New_York] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/medipnts/public_html/polygon/server.php on line 96
+[06-Jul-2015 19:23:56 America/New_York] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/medipnts/public_html/polygon/server.php on line 96
+[06-Jul-2015 19:43:27 America/New_York] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/medipnts/public_html/polygon/server.php on line 96
+[06-Jul-2015 20:28:57 America/New_York] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/medipnts/public_html/polygon/server.php on line 96
+[06-Jul-2015 20:31:43 America/New_York] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/medipnts/public_html/polygon/server.php on line 96
+[06-Jul-2015 20:41:03 America/New_York] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/medipnts/public_html/polygon/server.php on line 96
+[06-Jul-2015 20:41:28 America/New_York] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/medipnts/public_html/polygon/server.php on line 96
+[06-Jul-2015 20:43:37 America/New_York] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/medipnts/public_html/polygon/server.php on line 96
+[06-Jul-2015 20:50:02 America/New_York] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/medipnts/public_html/polygon/server.php on line 96
+[06-Jul-2015 20:50:11 America/New_York] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/medipnts/public_html/polygon/server.php on line 96
+[06-Jul-2015 20:59:41 America/New_York] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/medipnts/public_html/polygon/server.php on line 96
+[13-Jul-2015 11:10:00 America/New_York] PHP Fatal error:  Uncaught exception 'Services_Twilio_RestException' with message 'Message body is required.' in /home/medipnts/public_html/polygon/Services/Twilio.php:297
+Stack trace:
+#0 /home/medipnts/public_html/polygon/Services/Twilio.php(180): Base_Services_Twilio->_processResponse(Array)
+#1 /home/medipnts/public_html/polygon/Services/Twilio/ListResource.php(92): Base_Services_Twilio->createData('/2010-04-01/Acc...', Array)
+#2 /home/medipnts/public_html/polygon/Services/Twilio/Rest/Messages.php(24): Services_Twilio_ListResource->_create(Array)
+#3 /home/medipnts/public_html/polygon/server.php(63): Services_Twilio_Rest_Messages->create(Array)
+#4 /home/medipnts/public_html/polygon/server.php(23): Polygon::save('')
+#5 /home/medipnts/public_html/polygon/index.php(5): Polygon::saveCoords('')
+#6 {main}
+  thrown in /home/medipnts/public_html/polygon/Services/Twilio.php on line 297
+[17-Jul-2015 23:01:27 America/New_York] PHP Warning:  mysql_connect(): Access denied for user 'root'@'localhost' (using password: NO) in /home/medipnts/public_html/polygon/server.php on line 83
+[17-Jul-2015 23:03:01 America/New_York] PHP Warning:  mysql_connect(): Access denied for user 'root'@'localhost' (using password: YES) in /home/medipnts/public_html/polygon/server.php on line 73
+[17-Jul-2015 23:06:36 America/New_York] PHP Warning:  mysql_connect(): Access denied for user 'medipnts_root'@'localhost' (using password: YES) in /home/medipnts/public_html/polygon/server.php on line 73
+[17-Jul-2015 23:06:39 America/New_York] PHP Warning:  mysql_connect(): Access denied for user 'medipnts_root'@'localhost' (using password: YES) in /home/medipnts/public_html/polygon/server.php on line 73
+[17-Jul-2015 23:08:50 America/New_York] PHP Warning:  mysql_connect(): Unknown MySQL server host 'medipnts' (25) in /home/medipnts/public_html/polygon/server.php on line 73
+[17-Jul-2015 23:09:27 America/New_York] PHP Warning:  mysql_connect(): Access denied for user 'medipnts_root'@'localhost' (using password: YES) in /home/medipnts/public_html/polygon/server.php on line 73
+[17-Jul-2015 23:13:25 America/New_York] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/medipnts/public_html/polygon/server.php on line 86
+[17-Jul-2015 23:13:46 America/New_York] PHP Warning:  require(/Services/Twilio.php): failed to open stream: No such file or directory in /home/medipnts/public_html/polygon/server.php on line 44
+[17-Jul-2015 23:13:46 America/New_York] PHP Fatal error:  require(): Failed opening required '/Services/Twilio.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/medipnts/public_html/polygon/server.php on line 44
+[17-Jul-2015 23:19:19 America/New_York] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/medipnts/public_html/polygon/server.php on line 86
+[17-Jul-2015 23:19:25 America/New_York] PHP Warning:  require(/Services/Twilio.php): failed to open stream: No such file or directory in /home/medipnts/public_html/polygon/server.php on line 44
+[17-Jul-2015 23:19:25 America/New_York] PHP Fatal error:  require(): Failed opening required '/Services/Twilio.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/medipnts/public_html/polygon/server.php on line 44
+[17-Jul-2015 23:21:03 America/New_York] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/medipnts/public_html/polygon/server.php on line 86
+[17-Jul-2015 23:21:35 America/New_York] PHP Warning:  require(/Services/Twilio.php): failed to open stream: No such file or directory in /home/medipnts/public_html/polygon/server.php on line 44
+[17-Jul-2015 23:21:35 America/New_York] PHP Fatal error:  require(): Failed opening required '/Services/Twilio.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/medipnts/public_html/polygon/server.php on line 44
+[17-Jul-2015 23:23:50 America/New_York] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/medipnts/public_html/polygon/server.php on line 86
+[17-Jul-2015 23:23:58 America/New_York] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/medipnts/public_html/polygon/server.php on line 86
+[17-Jul-2015 23:26:21 America/New_York] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/medipnts/public_html/polygon/server.php on line 86
+[17-Jul-2015 23:30:10 America/New_York] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/medipnts/public_html/polygon/server.php on line 86
+[17-Jul-2015 23:30:12 America/New_York] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/medipnts/public_html/polygon/server.php on line 86
+[17-Jul-2015 23:30:14 America/New_York] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/medipnts/public_html/polygon/server.php on line 86
+[17-Jul-2015 23:30:24 America/New_York] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/medipnts/public_html/polygon/server.php on line 86
+[17-Jul-2015 23:31:39 America/New_York] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/medipnts/public_html/polygon/server.php on line 86
+[17-Jul-2015 23:34:31 America/New_York] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/medipnts/public_html/polygon/server.php on line 86
+[17-Jul-2015 23:39:07 America/New_York] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/medipnts/public_html/polygon/server.php on line 86
+[17-Jul-2015 23:42:04 America/New_York] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/medipnts/public_html/polygon/server.php on line 86
+[17-Jul-2015 23:48:15 America/New_York] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/medipnts/public_html/polygon/server.php on line 86
+[17-Jul-2015 23:50:03 America/New_York] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/medipnts/public_html/polygon/server.php on line 86
+[17-Jul-2015 23:52:59 America/New_York] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/medipnts/public_html/polygon/server.php on line 86
+[17-Jul-2015 23:53:02 America/New_York] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/medipnts/public_html/polygon/server.php on line 86

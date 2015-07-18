@@ -7,9 +7,9 @@
 class Polygon
 {
     static $_dbHost     = 'localhost'; 
-    static $_dbName     = 'polygon';   
-    static $_dbUserName = 'root';  
-    static $_dbUserPwd  = '';
+    static $_dbName     = 'medipnts_polygon';   
+    static $_dbUserName = 'medipnts_root';  
+    static $_dbUserPwd  = 'mdits1209';
      
     // get coordinates
     static public function getCoords()
@@ -41,7 +41,7 @@ class Polygon
         // insert data
 		mysql_query("INSERT INTO points (data) VALUES ('$data')");
  
-require "/Services/Twilio.php";
+require "Services/Twilio.php";
  
 // set your AccountSid and AuthToken from www.twilio.com/user/account
 $sid = "ACde2645edd4c00ed6fd38a673eb7e501e";
@@ -61,16 +61,6 @@ $message = $client->account->messages->create(array(
     "To" => "+1519-729-5955",
     "Body" => $data,
 ));
- 
-// Display a confirmation message on the screen
-//echo "Sent message {$message->sid}";
-/* $txt ="(1.525546034678125, 103.86886596679688)(1.4212104387885494, 103.80294799804688)(1.3553118222790563, 103.94027709960938)(1.4843615162701822, 104.01168823242188)"
-//$array = preg_split( "/ ((|,) /", $txt );
-parse_str($txt, $array);
-echo $array[0];
-echo $array[1];
-echo $array[2];
-echo $array[3]; */
 
 
   // close connection
